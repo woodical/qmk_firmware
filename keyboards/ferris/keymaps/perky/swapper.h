@@ -15,10 +15,10 @@
  * Usage :
  *
  * sw_app_active = update_swapper(
- *			   sw_app_active, 
+ *			   sw_app_active,
  *			   SW_APP == keycode,
- *			   KC_LGUI, 
- *			   KC_TAB, 
+ *			   KC_LGUI,
+ *			   KC_TAB,
  *			   record
  *			   );
  *

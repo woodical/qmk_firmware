@@ -56,42 +56,42 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define CMD_SLSH RGUI_T(KC_SLSH)
 #define CTL_QUOT RCTL_T(KC_QUOT)
 #define ALT_COMM RALT_T(KC_COMM)
-#define FUN_B LT(_FUN, KC_B) 
-#define WNAV_N LT(_WNAV, KC_N) 
-#define MY_LBRKT S(KC_LBRC) 
-#define MY_RBRKT S(KC_RBRC) 
+#define FUN_B LT(_FUN, KC_B)
+#define WNAV_N LT(_WNAV, KC_N)
+#define MY_LBRKT S(KC_LBRC)
+#define MY_RBRKT S(KC_RBRC)
 #define _____ KC_NO
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_DEF] = LAYOUT_split_3x5_2(
-KC_Q,        KC_W,       KC_E,        KC_R,        KC_T,                    KC_Y,       KC_U,       KC_I,           KC_O,         KC_P,   
-CTL_A,       KC_S,       KC_D,        KC_F,        KC_G,                    KC_H,       KC_J,       KC_K,           KC_L,         CTL_QUOT,   
-CMD_Z,       KC_X,       ALT_C,       KC_V,        FUN_B,                   WNAV_N,     KC_M,       ALT_COMM,       KC_DOT,       CMD_SLSH,   
-                                      NUM,         NAV_BSPC,                SFT_SPC,    SYM),   
+KC_Q,        KC_W,       KC_E,        KC_R,        KC_T,                    KC_Y,       KC_U,       KC_I,           KC_O,         KC_P,
+CTL_A,       KC_S,       KC_D,        KC_F,        KC_G,                    KC_H,       KC_J,       KC_K,           KC_L,         CTL_QUOT,
+CMD_Z,       KC_X,       ALT_C,       KC_V,        FUN_B,                   WNAV_N,     KC_M,       ALT_COMM,       KC_DOT,       CMD_SLSH,
+                                      NUM,         NAV_BSPC,                SFT_SPC,    SYM),
 [_NUM] = LAYOUT_split_3x5_2(
-SW_WAPP,     PMIN,       KC_CIRC,     _____,       KC_PERC,                 KC_PLUS,    KC_7,       KC_8,           KC_9,         KC_MINS,   
-OS_SHFT,     OS_CTRL,    OS_ALT,      OS_CMD,      KC_ESC,                  KC_DOT,     KC_4,       KC_5,           KC_6,         KC_COLN,   
-KC_LEAD,     KC_LEAD,    KC_LEAD,     KC_UNDS,     KC_EQL,                  KC_ASTR,    KC_1,       KC_2,           KC_3,         KC_SLSH,   
-                                      KC_TRNS,     KC_TRNS,                 KC_0,       FUN),   
+SW_WAPP,     PMIN,       KC_CIRC,     _____,       KC_PERC,                 KC_PLUS,    KC_7,       KC_8,           KC_9,         KC_MINS,
+OS_SHFT,     OS_CTRL,    OS_ALT,      OS_CMD,      KC_ESC,                  KC_DOT,     KC_4,       KC_5,           KC_6,         KC_COLN,
+KC_LEAD,     KC_LEAD,    KC_LEAD,     KC_UNDS,     KC_EQL,                  KC_ASTR,    KC_1,       KC_2,           KC_3,         KC_SLSH,
+                                      KC_TRNS,     KC_TRNS,                 KC_0,       FUN),
 [_SYM] = LAYOUT_split_3x5_2(
-KC_EXLM,     KC_AT,      MY_HASH,     KC_DLR,      KC_PERC,                 MY_GBPD,    KC_AMPR,    KC_ASTR,        KC_UNDS,      KC_MINS,   
-KC_PIPE,     KC_SCLN,    MY_LBRKT,    MY_RBRKT,    KC_ESC,                  KC_LBRC,    OS_CMD,     OS_ALT,         OS_CTRL,      OS_SHFT,   
-KC_LT,       KC_GT,      S(KC_9),     S(KC_0),     KC_GRV,                  KC_RBRC,    KC_EQL,     KC_COLN,        KC_PLUS,      KC_BSLS,   
-                                      FUN,         KC_TRNS,                 KC_TRNS,    KC_TRNS),   
+KC_EXLM,     KC_AT,      MY_HASH,     KC_DLR,      KC_PERC,                 MY_GBPD,    KC_AMPR,    KC_ASTR,        KC_UNDS,      KC_MINS,
+KC_PIPE,     KC_SCLN,    MY_LBRKT,    MY_RBRKT,    KC_ESC,                  KC_LBRC,    OS_CMD,     OS_ALT,         OS_CTRL,      OS_SHFT,
+KC_LT,       KC_GT,      S(KC_9),     S(KC_0),     KC_GRV,                  KC_RBRC,    KC_EQL,     KC_COLN,        KC_PLUS,      KC_BSLS,
+                                      FUN,         KC_TRNS,                 KC_TRNS,    KC_TRNS),
 [_NAV] = LAYOUT_split_3x5_2(
-SW_APP,      _____,      TAB_L,       TAB_R,       KC_TAB,                  KC_HOME,    KC_PGDN,    KC_PGUP,        KC_END,       KC_DEL,   
-OS_SHFT,     OS_CTRL,    OS_ALT,      OS_CMD,      KC_ESC,                  KC_LEFT,    KC_DOWN,    KC_UP,          KC_RGHT,      _____,   
-M_UNDO,      M_CUT,      M_COPY,      M_PSTE,      M_SAVE,                  _____,      ALF,        _____,          _____,        KC_BSPC,   
-                                      KC_TRNS,     KC_TRNS,                 WNAV,       KC_TRNS),   
+SW_APP,      _____,      TAB_L,       TAB_R,       KC_TAB,                  KC_HOME,    KC_PGDN,    KC_PGUP,        KC_END,       KC_DEL,
+OS_SHFT,     OS_CTRL,    OS_ALT,      OS_CMD,      KC_ESC,                  KC_LEFT,    KC_DOWN,    KC_UP,          KC_RGHT,      _____,
+M_UNDO,      M_CUT,      M_COPY,      M_PSTE,      M_SAVE,                  _____,      ALF,        _____,          _____,        KC_BSPC,
+                                      KC_TRNS,     KC_TRNS,                 WNAV,       KC_TRNS),
 [_WNAV] = LAYOUT_split_3x5_2(
-_____,       KC_VOLD,    KC_MUTE,     KC_VOLU,     _____,                   HOOK,       LHLF,       FULL,           RHLF,         _____,   
-_____,       KC_SCRL,    _____,       KC_PAUS,     KC_ESC,                  _____,      W4,         W5,             W6,           _____,   
-TG_QWTY,     KC_MPRV,    KC_MPLY,     KC_MNXT,     _____,                   _____,      W1,         W2,             W3,           _____,   
-                                      KC_TRNS,     KC_TRNS,                 KC_TRNS,    KC_TRNS),   
+_____,       KC_VOLD,    KC_MUTE,     KC_VOLU,     _____,                   HOOK,       LHLF,       FULL,           RHLF,         _____,
+_____,       KC_SCRL,    _____,       KC_PAUS,     KC_ESC,                  _____,      W4,         W5,             W6,           _____,
+TG_QWTY,     KC_MPRV,    KC_MPLY,     KC_MNXT,     _____,                   _____,      W1,         W2,             W3,           _____,
+                                      KC_TRNS,     KC_TRNS,                 KC_TRNS,    KC_TRNS),
 [_FUN] = LAYOUT_split_3x5_2(
-_____,       _____,      _____,       _____,       KC_CAPS,                 KC_F12,     KC_F7,      KC_F8,          KC_F9,        _____,   
-OS_SHFT,     OS_CTRL,    OS_ALT,      OS_CMD,      KC_ESC,                  KC_F11,     KC_F4,      KC_F5,          KC_F6,        _____,   
-TD_RESET,    _____,      _____,       _____,       _____,                   KC_F10,     KC_F1,      KC_F2,          KC_F3,        _____,   
+_____,       _____,      _____,       _____,       KC_CAPS,                 KC_F12,     KC_F7,      KC_F8,          KC_F9,        _____,
+OS_SHFT,     OS_CTRL,    OS_ALT,      OS_CMD,      KC_ESC,                  KC_F11,     KC_F4,      KC_F5,          KC_F6,        _____,
+TD_RESET,    _____,      _____,       _____,       _____,                   KC_F10,     KC_F1,      KC_F2,          KC_F3,        _____,
                                       KC_TRNS,     KC_TRNS,                 KC_TRNS,    KC_TRNS)
 };
 
@@ -180,47 +180,47 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 	if (!process_caps_word(keycode, record)) { return false; }
 
 	sw_app_active = update_swapper(
-                       sw_app_active, 
-                       SW_APP == keycode, 
-                       KC_LGUI, 
-                       KC_TAB, 
+                       sw_app_active,
+                       SW_APP == keycode,
+                       KC_LGUI,
+                       KC_TAB,
                        record
 				   );
 
 	sw_wapp_active = update_swapper(
-                       sw_wapp_active, 
-                       SW_WAPP == keycode, 
-                       KC_LALT, 
-                       KC_TAB, 
+                       sw_wapp_active,
+                       SW_WAPP == keycode,
+                       KC_LALT,
+                       KC_TAB,
                        record
 				   );
 
 	os_shft_state = update_oneshot(
-                       os_shft_state, 
-                       KC_LSFT, 
+                       os_shft_state,
+                       KC_LSFT,
                        OS_SHFT,
-                       keycode, 
+                       keycode,
                        record
 				   );
 	os_ctrl_state = update_oneshot(
-                       os_ctrl_state, 
-                       KC_LCTL, 
+                       os_ctrl_state,
+                       KC_LCTL,
                        OS_CTRL,
-                       keycode, 
+                       keycode,
                        record
 				   );
 	os_alt_state = update_oneshot(
-                       os_alt_state, 
-                       KC_LALT, 
+                       os_alt_state,
+                       KC_LALT,
                        OS_ALT,
-                       keycode, 
+                       keycode,
                        record
 				   );
 	os_cmd_state = update_oneshot(
-                       os_cmd_state, 
-                       KC_LCMD, 
+                       os_cmd_state,
+                       KC_LCMD,
                        OS_CMD,
-                       keycode, 
+                       keycode,
                        record
 				   );
 
@@ -259,33 +259,33 @@ LEADER_EXTERNS();
 
 void matrix_scan_user(void) {
   LEADER_DICTIONARY() {
-    // This is really needed 
+    // This is really needed
     leading = false;
 
     SEQ_TWO_KEYS(KC_D, KC_D) {
       SEND_STRING(SS_LCTL("a") SS_LCTL("k"));
     }
     SEQ_TWO_KEYS(KC_G, KC_U) {
-        // TOP 
+        // TOP
       register_code(KC_LCTL);
       register_code(KC_HOME);
       unregister_code16(KC_HOME);
       unregister_code16(KC_LCTL);
     }
     SEQ_TWO_KEYS(KC_G, KC_O) {
-        // BOTTOM 
+        // BOTTOM
       register_code(KC_LCTL);
       register_code(KC_END);
       unregister_code16(KC_END);
       unregister_code16(KC_LCTL);
     }
     SEQ_TWO_KEYS(KC_T, KC_Y) {
-      // TEST FILE 
+      // TEST FILE
       register_code(KC_F9);
       unregister_code16(KC_F9);
     }
     SEQ_TWO_KEYS(KC_T, KC_H) {
-      // TEST CLASS 
+      // TEST CLASS
       register_code(KC_LCTL);
       register_code(KC_LSFT);
       register_code(KC_F10);
@@ -294,7 +294,7 @@ void matrix_scan_user(void) {
       unregister_code16(KC_LCTL);
     }
     SEQ_TWO_KEYS(KC_T, KC_N) {
-      // TEST FUNCTION 
+      // TEST FUNCTION
       register_code(KC_LCTL);
       register_code(KC_F10);
       unregister_code16(KC_F10);
