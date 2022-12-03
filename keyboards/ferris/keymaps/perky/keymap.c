@@ -84,8 +84,8 @@ OS_SHFT,     OS_CTRL,    OS_ALT,      OS_CMD,      KC_ESC,                  KC_L
 M_UNDO,      M_CUT,      M_COPY,      M_PSTE,      M_SAVE,                  _____,      ALF,        _____,          _____,        KC_BSPC,   
                                       KC_TRNS,     KC_TRNS,                 WNAV,       KC_TRNS),   
 [_WNAV] = LAYOUT_split_3x5_2(
-RESET,       KC_VOLD,    KC_MUTE,     KC_VOLU,     _____,                   HOOK,       LHLF,       FULL,           RHLF,         _____,   
-_____,       KC_SLCK,    _____,       KC_PAUS,     KC_ESC,                  _____,      W4,         W5,             W6,           _____,   
+_____,       KC_VOLD,    KC_MUTE,     KC_VOLU,     _____,                   HOOK,       LHLF,       FULL,           RHLF,         _____,   
+_____,       KC_SCRL,    _____,       KC_PAUS,     KC_ESC,                  _____,      W4,         W5,             W6,           _____,   
 TG_QWTY,     KC_MPRV,    KC_MPLY,     KC_MNXT,     _____,                   _____,      W1,         W2,             W3,           _____,   
                                       KC_TRNS,     KC_TRNS,                 KC_TRNS,    KC_TRNS),   
 [_FUN] = LAYOUT_split_3x5_2(
@@ -267,17 +267,17 @@ void matrix_scan_user(void) {
     }
     SEQ_TWO_KEYS(KC_G, KC_U) {
         // TOP 
-      register_code(KC_LCTRL);
+      register_code(KC_LCTL);
       register_code(KC_HOME);
       unregister_code16(KC_HOME);
-      unregister_code16(KC_LCTRL);
+      unregister_code16(KC_LCTL);
     }
     SEQ_TWO_KEYS(KC_G, KC_O) {
         // BOTTOM 
-      register_code(KC_LCTRL);
+      register_code(KC_LCTL);
       register_code(KC_END);
       unregister_code16(KC_END);
-      unregister_code16(KC_LCTRL);
+      unregister_code16(KC_LCTL);
     }
     SEQ_TWO_KEYS(KC_T, KC_Y) {
       // TEST FILE 
@@ -286,19 +286,19 @@ void matrix_scan_user(void) {
     }
     SEQ_TWO_KEYS(KC_T, KC_H) {
       // TEST CLASS 
-      register_code(KC_LCTRL);
+      register_code(KC_LCTL);
       register_code(KC_LSFT);
       register_code(KC_F10);
       unregister_code16(KC_F10);
       unregister_code16(KC_LSFT);
-      unregister_code16(KC_LCTRL);
+      unregister_code16(KC_LCTL);
     }
     SEQ_TWO_KEYS(KC_T, KC_N) {
       // TEST FUNCTION 
-      register_code(KC_LCTRL);
+      register_code(KC_LCTL);
       register_code(KC_F10);
       unregister_code16(KC_F10);
-      unregister_code16(KC_LCTRL);
+      unregister_code16(KC_LCTL);
     }
     leader_end();
   }
